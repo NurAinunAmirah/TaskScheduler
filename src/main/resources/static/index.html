@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Scheduler</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="datetime-local"] {
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .task-list {
+            margin-top: 20px;
+        }
+        .task-item {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Task Scheduler</h1>
+
+<form id="taskForm">
+    <label for="description">Task Description:</label>
+    <input type="text" id="description" name="description" required>
+
+    <label for="dateTime">Task Date and Time:</label>
+    <input type="datetime-local" id="dateTime" name="dateTime" required>
+
+    <input type="submit" value="Add Task">
+</form>
+
+<h2>Scheduled Tasks</h2>
+<div id="taskList" class="task-list"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
